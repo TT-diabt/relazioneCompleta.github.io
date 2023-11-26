@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <center>
+        <h1>Relazione su circuito di rilevazione e monitoraggio temperatura</h1>
+    </center>
+    <hr>
+
+    <link rel="stylesheet" href="style2.css">
+    <style>
+        img{
+            display: block;
+            margin: auto;
+        }
+    </style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</div>
+<img src="cartellone/fotodimostrazione.jpeg" height="600">
+<p align="left">Questa relazione è la seconda parte dello studio che ho svolto a scuola riguardante il sistema di conversione analogico digitale</p><br>
+<p align="left">in questa parte illustrerò il processo che ho svolto fino ad arrivare alla costruzione del circuito che permette l'accensione di coppie di led al raggiungimento di determinati intervalli di temperatura</p>
+<p align="left">per la costruzione di questo circuito ho utilizzato gli stessi concetti teorici che ho utilizzato nella precedente esercitazione pratica</p>
+<p align="left">visto che pure  questo circuito rileva grandezze variabili(temperatura) che quindi sono caratterizzate da segnali di tensione analogici all'uscita dal trasduttore</p>
+<p align="left">è necessario anche per questo circuito  svolgere il processo di quantizzazione per convertire il segnale analogico in uno digitale suddividendolo in  livelli di tensione</p>
+<p align="left">Ed ognuno di questi livelli verrà codificato associandogli un unico valore di tensione</p>
+<p align="left">per far ciò ho deciso pure in questo caso di dividere il segnale analogico in 1024 livelli non perché necessitassi di utilizzare un minimo di 10bit ma perché aumentando il numero di livelli in cui si suddivide il segnale aumenta la precisione della lettura della temperatura </p><br>
+
+<p align="left">inseguito alla scelta dei parametri fondamenti per la costruzione del circuito sono passato alla sua costruzione</p>
+<img src="cartellone/fotodimostrazione.jpeg" height="600">
+
+<p align="left"> inseguito sono passato alla scrittura del programma con il quale ho dato le specifiche istruzioni al circuito per la coretta esecuzione della sua funzione ovvero far eccendere a coppie dei led a determinate soglie di temperatura</p>
+
+
+
+<p align="left">per far ciò ho scelto un intervallo di temperatura ed ad esso ho associato l'accensione di due led e lo spegnimento degli altri</p>
+<img src="cartellone/voidSetup.png" height="400">
+<p align="left">In questa immagine ho fornito al programma i pin a i quali sono collegati i diodi led oltre a utilizzare gli operatori matematici per far calcolare alla scheda arduino la Vi del livello in questione utilizzando la formula Vi = livello * Δv ed inseguito ho diviso per 10 poiche la costante k del trasduttore di temperatura moltiplica per 10 il valore della temperatura rilevata</p>
+<img src="cartellone/20e22.png" height="400">
+<p align="left">Inseguito ho scelto quali coppie di led accendere, in questa immagine per temperature minori di 20° ho fatto spengnere tutti i led</p>
+
+<img src="cartellone/tuttispentiVero.jpeg" height="500">
+<p align="left">Mentre per temperature minori di 22 gradi ho fatto accendere solo il pin 8</p>
+<img src="cartellone/22gradi.jpeg" height="500">
+<img src="cartellone/24e26.png" height="400">
+<p align="left">Mentre per temperature inferiori a 24° ho dato tensione solo a i pin 8 e9</p>
+<img src="cartellone/24gradi.jpeg" height="500">
+<p align="left">Invece per temperature inferiori di 26° ho dato tensione a i pin 8 , 9, 10</p>
+<img src="cartellone/sotto26.jpeg" height="500">
+<p align="left">Ed per le temperature inferiori a 28° ho fatto accendere i led dei pin 8, 9, 10, 11</p>
+<img src="cartellone/sotto28.jpeg" height="500">
+<img src="cartellone/28e30.png"height="400">
+<p align="left">ed per ultimo ho fatto accendere tutti i led per temperature superiori a 30°</p>
+<img src="cartellone/sopra30gradi.jpeg"height="500">    
+<h2>Conclusione</h2>
+<p align="left">in conclusione sono riuscito a raggiungere lo scopo dell' esercitazione pratica riuscendo  a programmare l'accensione e spegnimento  di diodi led in base a intervalli di temperatura</p>
+</body>
+</html>
